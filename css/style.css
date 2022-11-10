@@ -1582,33 +1582,50 @@ footer {
         gap: 5px;
     }
 
-    .footer__list li:active:first-child ~ li,
-    .footer__list li:focus:first-child ~ li,
-    .footer__list li:hover:first-child ~ li { 
-       opacity: 1;
-       height: 30px;
-       margin: 0;
-       width: auto;
-       font-style: normal;
-       font-weight: 400;
-       font-size: 16px;
-       line-height: 160%;
-       display: flex;
-       align-items: center;
-       color: #FFFFFF; 
-       opacity: 0.6; 
+    .footer__list li:active:first-child~li,
+    .footer__list li:focus:first-child~li,
+    .footer__list li:hover:first-child~li {
+        opacity: 1;
+        height: 30px;
+        margin: 0;
+        width: auto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        opacity: 0.6;
+    }
+    .footer__list li:first-child  {
+        position: relative;
+
+    }
+    .footer__list li:first-child::before {
+        transition: .4s;
+        position: absolute;
+        content: "";
+        top: 0;
+        right: -30px;
+        background: url(../img/svg/down-chevron.svg);
+        width: 24px;
+        height: 24px;
+        transform: rotate(180deg);
     }
 
-    .footer__list li:active:first-child{
-position: relative;
-    }
-    .footer__list li:active:first-child::before{
-position: absolute;
-content: "";
-width: 10px;
-height: 10px;
-background-color: #03CEA4;
-top: 0;
-right: 0;
+    .footer__list li:active:first-child::before, 
+    .footer__list li:focus:first-child::before, 
+    .footer__list li:hover:first-child::before 
+    
+    {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: -30px;
+        background: url(../img/svg/down-chevron.svg);
+        width: 24px;
+        height: 24px;
+        transform: rotate(0deg);
     }
 }
