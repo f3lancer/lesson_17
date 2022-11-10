@@ -1354,8 +1354,170 @@ body {
     flex: 1 1 48.3%;
 }
 
+/* --------------------Events---------------------------------- */
 
+.page__events {
+    background: linear-gradient(55.95deg, #ff3f3833 0%, #f55d0533 100%);
 
+    position: relative;
+}
+
+.events {}
+
+.events__container {
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.events__content {
+    width: 100%;
+}
+
+.events__box {
+    margin-bottom: 60px;
+}
+
+.title-box {}
+
+.events__box.title-box {
+    text-align: center;
+}
+
+.title-box__text {}
+
+.title-box__title {}
+
+.events__boxeslist {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.boxeslist-box {}
+
+.boxeslist-box__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 126px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 0 40px;
+    gap: 10px;
+    transition: .4s;
+
+}
+
+.boxeslist-box__list:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.boxeslist-box__list:hover {
+    box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+}
+
+.boxeslist-box__namber {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    color: #FF3F3A;
+}
+
+.boxeslist-box__date {}
+
+.boxeslist-box__monts {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: #1E212C;
+}
+
+.boxeslist-box__time {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #787A80;
+    min-width: 100px;
+}
+
+.boxeslist-box__content {
+    flex-grow: 1;
+}
+
+.boxeslist-box__name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: #1E212C;
+    max-width: 700px;
+}
+
+.boxeslist-box__option {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #787A80;
+}
+
+.boxeslist-box__botton {
+    flex-shrink: 0;
+    transition: .6s;
+}
+
+.botton {}
+
+.botton--transparent-orange:hover {
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    color: #FFFFFF;
+}
+
+.events__more {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.events__text {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #1E212C;
+}
+
+.events__botton {}
+
+.events__background {}
+
+.background-list {}
+
+.background-list__item {}
+
+.background-list__item--1 {}
+
+@media (max-width: 767.98px) {
+    .boxeslist-box__list {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 20px 20px;
+    }
+
+    .boxeslist-box__date {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+    }
+
+    .boxeslist-box__botton {
+        margin-left: auto;
+    }
+}
 
 /* /////////////////////fuuter///////////////////////// */
 
@@ -1599,10 +1761,12 @@ footer {
         color: #FFFFFF;
         opacity: 0.6;
     }
-    .footer__list li:first-child  {
+
+    .footer__list li:first-child {
         position: relative;
 
     }
+
     .footer__list li:first-child::before {
         transition: .4s;
         position: absolute;
@@ -1615,11 +1779,9 @@ footer {
         transform: rotate(180deg);
     }
 
-    .footer__list li:active:first-child::before, 
-    .footer__list li:focus:first-child::before, 
-    .footer__list li:hover:first-child::before 
-    
-    {
+    .footer__list li:active:first-child::before,
+    .footer__list li:focus:first-child::before,
+    .footer__list li:hover:first-child::before {
         position: absolute;
         content: "";
         top: 0;
@@ -1632,15 +1794,17 @@ footer {
 }
 
 @media (max-width: 767.98px) {
-    .footer__container{
+    .footer__container {
         flex-direction: column;
         max-width: 550px;
         gap: 15px;
     }
-    .header__list{
+
+    .header__list {
         max-width: 550px;
     }
-    .footer__list li:first-child::before{
+
+    .footer__list li:first-child::before {
         left: 50%;
     }
 }
