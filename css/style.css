@@ -1571,6 +1571,7 @@ footer {
         margin: 0;
         width: 0;
         pointer-events: none;
+        transition: .4s;
     }
 
     .footer__site-map {}
@@ -1627,5 +1628,19 @@ footer {
         width: 24px;
         height: 24px;
         transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer__container{
+        flex-direction: column;
+        max-width: 550px;
+        gap: 15px;
+    }
+    .header__list{
+        max-width: 550px;
+    }
+    .footer__list li:first-child::before{
+        left: 50%;
     }
 }
